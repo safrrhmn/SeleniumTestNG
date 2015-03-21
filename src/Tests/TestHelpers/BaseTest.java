@@ -1,20 +1,19 @@
+package Tests.TestHelpers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-/**
- * Created by Saifur on 3/13/2015.
- */
 public class BaseTest {
 
 
-    WebDriver driver;
+    public WebDriver driver;
     String url = "https://github.com/";
 
 
     @BeforeClass
     public void SetUpTests() {
+
         System.setProperty("webdriver.chrome.driver", "\\working\\Seleniumjava\\drivers\\chromedriver.exe");
         //System.setProperty("webdriver.ie.driver", "\\working\\Seleniumjava\\drivers\\IEDriverServer.exe");
         driver = new ChromeDriver();
@@ -29,9 +28,16 @@ public class BaseTest {
     }
 
     @AfterClass
-    public void CleanUpDriver() {
+    public void CleanUpDriver() throws Exception {
 
         // Quit current driver instance.
-        driver.quit();
+        try {
+
+            driver.quit();
+
+        }catch (Exception ex){
+
+            throw ex;
+        }
     }
 } 

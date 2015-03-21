@@ -1,15 +1,17 @@
+package PageObjects;
+import PageObjects.PageObjectHelpers.BaseClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-/**
- * Created by Saifur on 3/13/2015.
- */
-public class GitHubExplorePage extends BaseClass{
+public class GitHubExplorePage extends BaseClass {
+
+    private static final By elementSelector = By.xpath("//h2[.='Explore']");
 
     public GitHubExplorePage(WebDriver driver) {
-        super(driver);
+        super(driver,elementSelector);
 
     }
 

@@ -1,10 +1,10 @@
+package Tests;
+import PageObjects.GitHubLandingPage;
+import Tests.TestHelpers.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-/**
- * Created by Saifur on 3/13/2015.
- */
-public class GitHubTests extends BaseTest {
+public class GitHubHomePageTests extends BaseTest {
 
     @Test
     public void ExploreLinkTest(){
