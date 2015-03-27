@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.NoSuchElementException;
+
 /**
  * Defines the generic methods/functions for PageObjects.
  */
@@ -44,7 +46,7 @@ public class BaseClass {
 
             driver.findElement(by).isDisplayed();
 
-        } catch (NoSuchFieldError ex) {
+        } catch (NoSuchElementException ex) {
 
             throw ex;
         }
