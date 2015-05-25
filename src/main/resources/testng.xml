@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite1" verbose="1"  >
+
+    <test name="GitHub HomePage Test" >
+        <classes>
+            <class name="GitHubHomePageTests" >
+                <methods>
+                    <include name = "GitHubHomePageTests"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
