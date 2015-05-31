@@ -1,3 +1,5 @@
+package com.github.pageobjects;
+
 public final class ClientSideScript {
 
     /**

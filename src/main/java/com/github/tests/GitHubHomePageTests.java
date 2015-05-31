@@ -1,3 +1,6 @@
+package com.github.tests;
+
+import com.github.pageobjects.GitHubLandingPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

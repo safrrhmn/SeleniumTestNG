@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="firefox">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="com.github.tests.GitHubHomePageTests" />
+        </classes>
+    </test>
+    <test name="ie">
+        <parameter name="browser" value="ie" />
+        <classes>
+            <class name="com.github.tests.GitHubHomePageTests" />
+        </classes>
+    </test>
+    <test name="chrome">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.github.tests.GitHubHomePageTests" />
+        </classes>
+    </test>
+</suite>
