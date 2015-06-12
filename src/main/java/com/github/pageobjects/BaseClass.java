@@ -9,16 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.NoSuchElementException;
 
-/**
- * Defines the generic methods/functions for PageObjects.
- */
 public class BaseClass {
 
     protected WebDriver driver;
     private long DefaultPageLoadTimeOut = 10;
 
-    /**
-     * @param _driver
+    /**@param _driver
      * @param byKnownElement
      */
     public BaseClass(WebDriver _driver, By byKnownElement) {
@@ -35,25 +31,19 @@ public class BaseClass {
 
     /**
      * Verifies correct page was returned.
-     *
      * @param by
      */
     private void correctPageLoadedCheck(By by) {
 
         this.isReadyState();
-
         try {
-
             driver.findElement(by).isDisplayed();
-
         } catch (NoSuchElementException ex) {
-
             throw ex;
         }
     }
 
-    /**
-     * Waits until the Document Object Model is in ready State.
+    /* Waits until the Document Object Model is in ready State.
      */
     private void isReadyState() {
 

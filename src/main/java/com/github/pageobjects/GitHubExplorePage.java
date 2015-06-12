@@ -15,8 +15,12 @@ public class GitHubExplorePage extends BaseClass {
 
     }
 
-    @FindBy(how = How.CSS, using = ".container>h1")
-    private WebElement TitleElement;
+    // <editor-fold desc="UIMapping">
+
+        @FindBy(how = How.CSS, using = ".container>h1")
+        private WebElement TitleElement;
+
+    // </editor-fold>
 
     public String getGitHubExplorerPageTitle() {
 

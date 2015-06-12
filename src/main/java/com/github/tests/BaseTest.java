@@ -8,7 +8,6 @@ import org.testng.annotations.*;
 
 public class BaseTest {
 
-
     public WebDriver driver;
     String url = "https://github.com/";
 
@@ -24,24 +23,18 @@ public class BaseTest {
             System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
             driver = new ChromeDriver();
         }
-
         //Navigate to url
         driver.navigate().to(url);
-
         //Maximize the browser window
         driver.manage().window().maximize();
     }
 
     @AfterClass
     public void CleanUpDriver() throws Exception {
-
         // Quit current driver instance.
         try {
-
             driver.quit();
-
         }catch (Exception ex){
-
             throw ex;
         }
     }

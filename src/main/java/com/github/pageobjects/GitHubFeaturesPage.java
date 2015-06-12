@@ -9,6 +9,5 @@ public class GitHubFeaturesPage extends BaseClass {
 
     public GitHubFeaturesPage(WebDriver driver) {
         super(driver,elementSelector);
-
     }
 }
