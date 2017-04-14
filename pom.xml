@@ -38,7 +38,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <!-- set to forkCount to 0 for debuggin using mvn Runner-->
+                    <!-- set to forkCount to 0 for debugging using mvn Runner-->
                     <forkCount>0</forkCount>
                     <systemPropertyVariables>
                         <webdriver.chrome.driver>
