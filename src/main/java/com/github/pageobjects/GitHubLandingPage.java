@@ -12,29 +12,31 @@ public class GitHubLandingPage extends BaseClass {
 
     // <editor-fold desc='UIMapping'>
 
-    @FindBy(how = How.CSS, using = ".container.clearfix>ul>li:first-child>a")
-    private WebElement ExploreLink;
+    @FindBy(how = How.CSS, using = "[href='/explore']")
+    private WebElement exploreLink;
 
-    @FindBy(how = How.CSS, using = ".container.clearfix>ul>li:nth-child(2)>a")
-    private WebElement FeaturesLink;
+    @FindBy(how = How.CSS, using = ".site-header-menu [href='/features']")
+    private WebElement featuresLink;
 
     // </editor-fold>
 
-
     public GitHubLandingPage(WebDriver driver) {
-        super(driver,elementSelector);
+
+        super(driver, elementSelector);
     }
 
     /*
      * @return GitHub Explore page.
      */
-    public GitHubExplorePage clickGitHubExplorePage(){
-        ExploreLink.click();
+    public GitHubExplorePage clickGitHubExplorePage() {
+
+        exploreLink.click();
         return new GitHubExplorePage(driver);
     }
 
-    public GitHubFeaturesPage ClickGitHubFeaturesPage(){
-        FeaturesLink.click();
+    public GitHubFeaturesPage clickGitHubFeaturesPage() {
+
+        featuresLink.click();
         return new GitHubFeaturesPage(driver);
     }
 }

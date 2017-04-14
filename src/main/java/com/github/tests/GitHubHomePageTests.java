@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class GitHubHomePageTests extends BaseTest {
 
     @Test
-    public void ExploreLinkTest(){
+    public void exploreLinkTest(){
 
         String explorePageTitle = new GitHubLandingPage(driver)
                 .clickGitHubExplorePage()

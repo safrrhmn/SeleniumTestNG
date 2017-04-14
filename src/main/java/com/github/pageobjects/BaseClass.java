@@ -3,6 +3,7 @@ package com.github.pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,6 +14,7 @@ public class BaseClass {
 
     protected WebDriver driver;
     private long DefaultPageLoadTimeOut = 10;
+    private WebDriverWait wait;
 
     /**@param _driver
      * @param byKnownElement
@@ -27,6 +29,8 @@ public class BaseClass {
         /* Instantiating all elements since this is super class
         and inherited by each and every page object */
         PageFactory.initElements(driver, this);
+
+        wait = new WebDriverWait(driver, TimeoutConstants.CONDITIONTAL_TIMEOUT_IN_SEC);
     }
 
     /**
@@ -48,13 +52,21 @@ public class BaseClass {
     private void isReadyState() {
 
         ExpectedCondition<Boolean> pageLoadCondition = new
-                ExpectedCondition<Boolean>() {
-                    public Boolean apply(WebDriver driver) {
-                        return ((JavascriptExecutor) driver).executeScript(ClientSideScript.domReadyState).equals("complete");
-                    }
-                };
+            ExpectedCondition<Boolean>() {
+
+                public Boolean apply(WebDriver driver) {
+
+                    return ((JavascriptExecutor) driver).executeScript(ClientSideScript.domReadyState)
+                                                        .equals("complete");
+                }
+            };
 
         WebDriverWait wait = new WebDriverWait(driver, DefaultPageLoadTimeOut);
         wait.until(pageLoadCondition);
+    }
+
+    public WebElement findElementWithExpectedCondition(ExpectedCondition expectedCondition) {
+
+        return (WebElement) wait.until(expectedCondition);
     }
 }
