@@ -30,7 +30,7 @@ public class BaseClass {
         and inherited by each and every page object */
         PageFactory.initElements(driver, this);
 
-        wait = new WebDriverWait(driver, TimeoutConstants.CONDITIONTAL_TIMEOUT_IN_SEC);
+        wait = new WebDriverWait(driver, TimeoutConstants.CONDITIONAL_TIMEOUT_IN_SEC);
     }
 
     /**

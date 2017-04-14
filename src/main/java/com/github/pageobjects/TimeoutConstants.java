@@ -1,5 +1,5 @@
 package com.github.pageobjects;
 public interface TimeoutConstants {
 
-    int CONDITIONTAL_TIMEOUT_IN_SEC = 15;
+    int CONDITIONAL_TIMEOUT_IN_SEC = 15;
 }
