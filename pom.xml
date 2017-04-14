@@ -50,17 +50,25 @@
                         <webdriver.ie.driver>
                             ${project.basedir}\driver\windows\internetexplorer\32bit\IEDriverServer.exe
                         </webdriver.ie.driver>
-                        <browser>Chrome</browser>
+
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <suiteXmlFile>CrossBrowser.xml</suiteXmlFile>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <properties>
+                    <!--<properties>
                         <property>
                             <name>testnames</name>
-                            <value>crossBrowsersTest</value>
+                            <value>crossBrowsersTest1</value>
                         </property>
-                    </properties>
+                        <property>
+                            <name>testnames</name>
+                            <value>crossBrowsersTest2</value>
+                        </property>
+                        <property>
+                            <name>testnames</name>
+                            <value>crossBrowsersTest3</value>
+                        </property>
+                    </properties>-->
                 </configuration>
             </plugin>
             <plugin>
